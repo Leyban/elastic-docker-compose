@@ -61,6 +61,8 @@ services:
       interval: 1s
       timeout: 5s
       retries: 120
+    # networks:
+    #   - airflow
 
   es01:
     container_name: es01
@@ -105,6 +107,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    # networks:
+    #   - airflow
 
   es02:
     container_name: es02
@@ -145,6 +149,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    # networks:
+    #   - airflow
 
   es03:
     container_name: es03
@@ -185,6 +191,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    # networks:
+    #   - airflow
 
   kibana:
     container_name: kibana
@@ -217,6 +225,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+    # networks:
+    #   - airflow
 
 volumes:
   esdata01:
@@ -228,3 +238,8 @@ volumes:
   kibanadata:
     driver: local
 
+
+# networks:
+#   airflow:
+#     name: main-airflow_default
+#     external: true
